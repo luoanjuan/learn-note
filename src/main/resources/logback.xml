@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+
+    <appender name="rootAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoding>UTF-8</encoding>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <param name="pattern"
+                   value="%d{yyyy-MM-dd HH:mm:ss.SSS} - %-5level %logger{36} - %X{TraceId} %X{BOID} - %message%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="busuacAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/busuac.daily.log</file>
+        <encoding>UTF-8</encoding>
+        <append>true</append>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern><![CDATA[
+[%d{yyyy-MM-dd HH:mm:ss}][%level] %logger{35} - %m%n
+            ]]></pattern>
+        </layout>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/busuac.daily.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>7</maxHistory>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+    </appender>
+
+
+    <logger name="org.apache" additivity="false">
+        <level value="WARN"/>
+        <appender-ref ref="rootAppender"/>
+    </logger>
+
+    <logger name="com.alitrip" additivity="false" level="INFO">
+        <appender-ref ref="busuacAppender"/>
+    </logger>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="rootAppender"/>
+    </root>
+</configuration>

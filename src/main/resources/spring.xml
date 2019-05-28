@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+    <bean class="org.springframework.context.annotation.ConfigurationClassPostProcessor"/>
+    <!--<context:annotation-config/>-->
+    <!--<context:component-scan base-package="daily.springtest1.*"/>-->
+    <!--<bean class="org.springframework.context.annotation.AnnotationConfigBeanDefinitionParser"/>-->
+
+    <!--<bean id="car" class="daily.springtest1.Car" init-method="myInit" destroy-method="myDestroy" p:color="黑色" p:brand="红旗" p:maxSpeed="200"  />-->
+
+    <!--<bean id="myBeanFactoryPostProcessor" class="daily.springtest1.MyBeanFactoryPostProcessor" />-->
+    <!--<bean id="myBeanPostProcessor"  class="daily.springtest1.MyBeanPostProcessor" />-->
+    <!--<bean id="myInstantiationAwareBeanPostProcessor" class="daily.springtest1.MyInstantiationAwareBeanPostProcessor" />-->
+
+   <bean id="annotationTest" class="daily.springtest1.AnnotationTest" />
+
+    <aop:aspectj-autoproxy />
+
+</beans>
