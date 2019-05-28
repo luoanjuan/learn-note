@@ -1,6 +1,6 @@
 *.class
 *.bak
-*/target/**
+target/*
 *.project
 *.classpath
 .idea/
