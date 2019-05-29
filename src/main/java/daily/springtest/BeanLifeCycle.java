@@ -1,4 +1,4 @@
-package daily.springtest1;
+package daily.springtest;
 
 
 import org.slf4j.Logger;

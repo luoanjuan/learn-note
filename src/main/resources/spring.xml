@@ -12,16 +12,16 @@
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
     <bean class="org.springframework.context.annotation.ConfigurationClassPostProcessor"/>
     <!--<context:annotation-config/>-->
-    <!--<context:component-scan base-package="daily.springtest1.*"/>-->
+    <!--<context:component-scan base-package="daily.springtest*"/>-->
     <!--<bean class="org.springframework.context.annotation.AnnotationConfigBeanDefinitionParser"/>-->
 
-    <!--<bean id="car" class="daily.springtest1.Car" init-method="myInit" destroy-method="myDestroy" p:color="黑色" p:brand="红旗" p:maxSpeed="200"  />-->
+    <!--<bean id="car" class="daily.springtestCar" init-method="myInit" destroy-method="myDestroy" p:color="黑色" p:brand="红旗" p:maxSpeed="200"  />-->
 
-    <!--<bean id="myBeanFactoryPostProcessor" class="daily.springtest1.MyBeanFactoryPostProcessor" />-->
-    <!--<bean id="myBeanPostProcessor"  class="daily.springtest1.MyBeanPostProcessor" />-->
-    <!--<bean id="myInstantiationAwareBeanPostProcessor" class="daily.springtest1.MyInstantiationAwareBeanPostProcessor" />-->
+    <!--<bean id="myBeanFactoryPostProcessor" class="daily.springtestMyBeanFactoryPostProcessor" />-->
+    <!--<bean id="myBeanPostProcessor"  class="daily.springtestMyBeanPostProcessor" />-->
+    <!--<bean id="myInstantiationAwareBeanPostProcessor" class="daily.springtestMyInstantiationAwareBeanPostProcessor" />-->
 
-   <bean id="annotationTest" class="daily.springtest1.AnnotationTest" />
+   <bean id="annotationTest" class="daily.springtest.AnnotationTest" />
 
     <aop:aspectj-autoproxy />
 

@@ -1,4 +1,4 @@
-package daily.httpClient;
+package daily.http;
 
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
@@ -9,7 +9,6 @@ import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.conn.DefaultHttpResponseParser;
 import org.apache.http.impl.conn.DefaultHttpResponseParserFactory;
 import org.apache.http.impl.conn.ManagedHttpClientConnectionFactory;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;

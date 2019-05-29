@@ -1,4 +1,4 @@
-package daily.springtest1;
+package daily.springtest;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

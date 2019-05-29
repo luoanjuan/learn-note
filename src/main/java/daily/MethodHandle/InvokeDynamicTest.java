@@ -1,4 +1,4 @@
-package daily.jvmtest;
+package daily.MethodHandle;
 
 import java.lang.invoke.*;
 

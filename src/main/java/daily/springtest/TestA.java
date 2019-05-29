@@ -1,4 +1,4 @@
-package daily.springtest1;
+package daily.springtest;
 
 /**
  * Created by wb-zj373670 on 2018/6/26.

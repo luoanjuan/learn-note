@@ -1,4 +1,4 @@
-package daily.springtest1;
+package daily.springtest;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
