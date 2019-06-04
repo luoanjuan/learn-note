@@ -14,7 +14,7 @@
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <java.encoding>UTF-8</java.encoding>
         <!--<spring.version>2.5.6</spring.version>-->
-        <spring.version>4.2.2.RELEASE</spring.version>
+        <spring.version>5.1.5.RELEASE</spring.version>
         <!--<spring.version>4.0.9.RELEASE</spring.version>-->
         <uaf.version>2.0.6.1</uaf.version>
         <traveluac-common-version>1.0.0-SNAPSHOT</traveluac-common-version>
@@ -35,20 +35,12 @@
             </plugins>
         </pluginManagement>
 
-
-
-
-
-
-
-
-
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
@@ -63,7 +55,7 @@
                             <classpathPrefix>lib/</classpathPrefix>
                             <!--  当用户使用 lib命令执行JAR文件时，使用该元素定义将要执行的类名  -->
                             <mainClass>com.itsenlin.Helloworld</mainClass>
-                         </manifest>
+                        </manifest>
                     </archive>
                 </configuration>
             </plugin>
@@ -87,10 +79,7 @@
 
     </build>
 
-
-
     <dependencies>
-
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-dependency-plugin</artifactId>
@@ -104,21 +93,18 @@
             <version>3.6.2.Final</version>
         </dependency>
 
-
         <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.2</version>
             <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>org.apache.httpcomponents</groupId>-->
-                    <!--<artifactId>httpcore</artifactId>-->
-                <!--</exclusion>-->
-
+            <!--<exclusion>-->
+            <!--<groupId>org.apache.httpcomponents</groupId>-->
+            <!--<artifactId>httpcore</artifactId>-->
+            <!--</exclusion>-->
             <!--</exclusions>-->
         </dependency>
-
 
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/com.google.guava/guava &ndash;&gt;-->
         <dependency>
@@ -133,7 +119,6 @@
             <artifactId>jsr305</artifactId>
             <version>3.0.2</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -202,7 +187,6 @@
         </dependency>
 
 
-
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/dom4j/dom4j &ndash;&gt;-->
         <dependency>
             <groupId>dom4j</groupId>
@@ -217,8 +201,6 @@
             <version>4.1.32.Final</version>
         </dependency>
 
-
-
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/cglib/cglib &ndash;&gt;-->
         <dependency>
             <groupId>cglib</groupId>
@@ -232,7 +214,6 @@
             <artifactId>aspectjrt</artifactId>
             <version>1.8.13</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
@@ -265,7 +246,6 @@
             <version>4.5.2</version>
         </dependency>
 
-
         <dependency>
             <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
@@ -277,12 +257,7 @@
             <artifactId>ciksc-client</artifactId>
             <version>1.1.0-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
-
-
-
-
 
 
 </project>
