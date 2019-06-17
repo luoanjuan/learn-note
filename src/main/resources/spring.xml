@@ -7,10 +7,10 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
-    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
-    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
-    <bean class="org.springframework.context.annotation.ConfigurationClassPostProcessor"/>
+    <!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />-->
+    <!--<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>-->
+    <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
+    <!--<bean class="org.springframework.context.annotation.ConfigurationClassPostProcessor"/>-->
     <!--<context:annotation-config/>-->
     <!--<context:component-scan base-package="daily.springtest*"/>-->
     <!--<bean class="org.springframework.context.annotation.AnnotationConfigBeanDefinitionParser"/>-->
@@ -21,7 +21,9 @@
     <!--<bean id="myBeanPostProcessor"  class="daily.springtestMyBeanPostProcessor" />-->
     <!--<bean id="myInstantiationAwareBeanPostProcessor" class="daily.springtestMyInstantiationAwareBeanPostProcessor" />-->
 
-   <bean id="annotationTest" class="daily.springtest.AnnotationTest" />
+   <!--<bean id="annotationTest" class="daily.springtest.AnnotationTest" />-->
+
+    <bean id="car" class="daily.springtest.Car"/>
 
     <aop:aspectj-autoproxy />
 
