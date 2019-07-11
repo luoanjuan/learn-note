@@ -9,22 +9,22 @@
        http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <aop:aspectj-autoproxy proxy-target-class="true"/>
-    <context:component-scan base-package="daily.proxy.*" />
-    <!--<bean id ="adviceTest" class="daily.proxy.annotionProxy.AdivceTest" />-->
+    <context:component-scan base-package="java_jdk.proxy.*" />
+    <!--<bean id ="adviceTest" class="java_jdk.proxy.annotionProxy.AdivceTest" />-->
 
 
     <!--<aop:config>-->
-        <!--<aop:pointcut id="point" expression="execution(* daily.proxy.annotionProxy.TargetTest.*(..))"/>-->
+        <!--<aop:pointcut id="point" expression="execution(* java_jdk.proxy.annotionProxy.TargetTest.*(..))"/>-->
         <!--<aop:aspect ref="adviceTest">-->
             <!--<aop:before method="beforeTest" pointcut-ref="point"/>-->
         <!--</aop:aspect>-->
     <!--</aop:config>-->
 
 
-    <!--<bean id="male" class="daily.proxy.proxy1.Male" />-->
+    <!--<bean id="male" class="java_jdk.proxy.proxy1.Male" />-->
 
-    <!--<bean id="human" class="daily.proxy.proxy1.ServiceProviderBean" init-method="init">-->
-        <!--<property name="className" value="daily.proxy.proxy1.Human"/>-->
+    <!--<bean id="human" class="java_jdk.proxy.proxy1.ServiceProviderBean" init-method="init">-->
+        <!--<property name="className" value="java_jdk.proxy.proxy1.Human"/>-->
     <!--</bean>-->
 
 
