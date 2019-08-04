@@ -13,13 +13,15 @@ import java.util.Date;
 public class TimeServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception { // 1
+        System.out.println(msg.getClass());
         String request = (String) msg; //2
         String response = null;
-        if ("QUERY TIME ORDER".equals(request)) { // 3
-            response = new Date(System.currentTimeMillis()).toString();
-        } else {
-            response = "BAD REQUEST";
-        }
+//        if ("QUERY TIME ORDER".equals(request)) { // 3
+//            response = new Date(System.currentTimeMillis()).toString();
+//        } else {
+//            response = "BAD REQUEST";
+//        }
+        response = new Date(System.currentTimeMillis()).toString();
         response = response + System.getProperty("line.separator"); // 4
                 ByteBuf resp = Unpooled.copiedBuffer(response.getBytes()); // 5
         ctx.writeAndFlush(resp); // 6

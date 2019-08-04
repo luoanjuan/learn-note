@@ -4,10 +4,10 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
+import java.util.concurrent.locks.LockSupport;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class TestMain {
 
@@ -16,23 +16,43 @@ public class TestMain {
 //    static sun.misc.Unsafe unsafe = sun.misc.Unsafe.getUnsafe();
 
     public static void main(String[] args) {
+        Object object = new Object();
         try {
-            System.out.println(new Random().nextLong());
-//            List<Integer> hotelIdList = new ArrayList();
-//            List<Integer> currentList = new ArrayList<>(10);
-//
-//            for(int i = 0; i < 92 ; i++){
-//                hotelIdList.add(i);
-//            }
-//            for(int i = 0; i < hotelIdList.size(); i += 10){
-//                int length = i+10 < hotelIdList.size() ? 10 : hotelIdList.size()-i;
-//                currentList = hotelIdList.subList(i, i+length);
-//                System.out.println(JSON.toJSONString(currentList));
-//            }
+            Thread thread = new Thread(()->{
+                try {
+                    synchronized (object){
+                        System.out.println("sa");
+                        object.wait();
+                    }
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+
+            });
+            thread.start();
+
+            System.out.println(thread.isInterrupted());
+            thread.interrupt();
+            System.out.println(thread.isInterrupted());
+            System.out.println("park");
+            System.out.println("interrupt");
+
         }catch (Exception e){
             e.printStackTrace();
         }
-
-
     }
+    public static void testOne(String aa){
+        System.out.println(aa);
+    }
+
+    public static boolean test(String aa){
+        return true;
+    }
+
+    public static void change(TestTwo testTwo){
+       testTwo.setAge(2);
+    }
+
 }

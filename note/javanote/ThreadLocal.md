@@ -1,0 +1,10 @@
+## ThreadLocal
+
+- 每个线程有一个 ThreadLocalMap变量，ThreadLocal变量会以这个变量为key，变量set的值为value组成Entry，对于同一个ThreadLocal，不同线程存储的Entry中的key是同一个ThreadLoacl。
+- Thread内部的Map是由ThreadLocal维护的，ThreadLocal负责向map获取和设置线程的变量值。
+
+### 内存泄露
+ThreadLocalMap 是ThreadLocal中的内部类，ThreadLocalMap.Entry继承了WeakReference，key是弱引用。对于一个ThreadLocal变量，如果出了栈帧，就没用了强引用，
+因为在ThreadLocalMap中是弱引用，所以会被回收，但是线程存活，线程对象中的ThreadLocalMap对象可达，该map对象中的entry也是可达，value不会被回收，只有可能发生
+hash碰撞的时候被其他ThreadLocal变量对应的值替换。所以会造成内存泄露。还有如果A线程中某个ThreadLocal还可达，但是B线程不在可达，那么B线程中的ThreadLocalMap
+中的这个key应该也不会被回收。
