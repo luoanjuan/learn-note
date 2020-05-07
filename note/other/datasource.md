@@ -50,4 +50,39 @@ undo log格式：undo的类型；事务id，table_id（undo log所对应的表�
 purge用于最终完成delete和update操作。这样升级时因为InnoDB存储引擎支持MVCC，所以记录不能在事务提交时进行处理。History列表根据事务提交的顺序，将undo log进行连接。从History log定位
 undo log页中log是从效率考虑。
 
+## 5 MYSQL Server Administration ##
+
+#### 5.1 The MySQL Server ####
+
+##### Configuring the Server #####
+
+````text
+## mysql服务器默认使用的命令选项和系统变量值
+mysqld --verbose --help ‘=
+## 查看当前运行的系统使用的系统变量
+SHOW VARIABLES
+## 查看一些统计和状态指标
+SHOW STATUS
+## 系统变量和状态也可以使用mysqladmin查看
+mysqladmin variables
+mysqladmin extended-status
+````
+
+#####  Server Configuration Validation ######
+
+MySQL 8.0.16支持 --validate-config 参数以支持启动配置问题
+
+####  5.2 The MySQL Data Directory  ####
+
+MySQL 
+
+
+
+#### 5.3 The Mysql System Schema
+
+
+
+
+
+
 
